@@ -1,6 +1,7 @@
 import React from 'react'
 import './navbarBanner.css'
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 
 const NavbarBanner = () => {
   const options = [
@@ -27,9 +28,9 @@ const NavbarBanner = () => {
         {
           options.map((item, ind) => {
             return (
-              <div className="optionsNavbarBanner" key={ind}>
+              <Link to={"/products"} className="optionsNavbarBanner" key={ind}>
                 <div className='allOptionsNavbarBanner'>{item.name}</div>
-              </div>
+              </Link>
             )
           })
         }

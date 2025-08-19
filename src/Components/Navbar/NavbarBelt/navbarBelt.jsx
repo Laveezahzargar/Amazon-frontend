@@ -5,15 +5,16 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { Link } from 'react-router-dom';
 
-const navbarBelt = () => {
+const NavbarBelt = () => {
     return (
         <div className='navbarBelt'>
             <div className='leftNavBelt'>
-                <div className='leftNavBeltLogo'>
+                <Link to={"/"} className='leftNavBeltLogo'>
                     <img className='amazonLogoNavbar' src={amazonLogo} alt='amazonLogo' />
                     <span className='navbar_inLogo'>.in</span>
-                </div>
+                </Link>
                 <div className='navbarBeltLocation'>
                     <div className='navbarBeltLocationImg'>
                         <LocationOnOutlinedIcon className='navbarBeltLocationImgIcon' sx={{ fontSize: "22px" }} />
@@ -50,15 +51,15 @@ const navbarBelt = () => {
                     <div className='helloTopNavbarBelt'>Returns</div>
                     <div className='indiaCodeNavbarBelt'>& Orders </div>
                 </div>
-                <div className='helloSignInNavbarBelt'>
+                <Link to={"/cart"} className='helloSignInNavbarBelt'>
                     <span className='cartItemNumberNavbarBelt'>2</span>
                     <div className='helloTopNavbarBelt'><ShoppingCartOutlinedIcon />
                     <span className='cartTitle'>Cart</span>
                     </div>
-                </div>
+                </Link>
             </div>
         </div>
     )
 }
 
-export default navbarBelt;
+export default NavbarBelt;
