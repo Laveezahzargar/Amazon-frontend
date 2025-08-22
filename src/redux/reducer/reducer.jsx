@@ -1,17 +1,17 @@
 import { ADD_TO_CART, REMOVE_FROM_CART, UPDATE_CART_QUANTITY, CLEAR_CART } from "../actionsType";
 
 
-const intialState = {
+const initialState = {
     items: []
 }
 
 
-const cartReducer = (state = intialState, action) => {
+const cartReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_TO_CART:
             return {
                 ...state,
-                items: [...state, action.payload]
+                items: [...state.items, action.payload]
             };
         case REMOVE_FROM_CART:
             return {
